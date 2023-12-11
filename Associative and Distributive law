@@ -1,0 +1,49 @@
+Associative Law and Distributive Law are mathematical principles that apply to operations like addition
+and multiplication. They help define how these operations behave when you perform them onmultiple
+values. Here's a brief explanation of each:
+1. Associative Law:
+The Associative Law states that the grouping of numbers does not affect the result when you perform
+certain operations. In other words, it doesn't matter how you group the numbers; the finalresult will be
+the same.
+- For addition: (a + b) + c = a + (b + c)
+- For multiplication: (a * b) * c = a * (b * c)
+For example, when adding or multiplying three numbers, you can choose to group them differently,but the
+final result will be identical.
+2. Distributive Law:
+The Distributive Law relates two different operations, often multiplication and addition (orsubtraction). It
+states that you can distribute an operation across terms inside parentheses.- For multiplication over addition: a * (b + c) = (a * b) + (a * c)
+- For multiplication over subtraction: a * (b - c) = (a * b) - (a * c)
+This law allows you to break down a complex expression into simpler parts, apply the operation toeach
+part, and then combine the results. It's a fundamental concept in algebra.
+Both of these laws are essential in mathematics and are used extensively in algebra and arithmetic tosimplify
+expressions, solve equations, and manipulate numbers and variables.
+Prolog code: Associative law
+% Define the associative law for addition
+associative_law(A, B, C, Result) :-
+Result is A + (B + C).
+% Define some example expressions
+expression1(2, 3, 4).
+expression2(5, 6, 7).
+% Derive the results using the associative law
+derive_results :-
+expression1(A, B, C),
+associative_law(A, B, C, Result1),
+expression2(X, Y, Z),
+associative_law(X, Y, Z, Result2),
+write('Result of expression 1 using associative law: '), write(Result1), nl,
+write('Result of expression 2 using associative law: '), write(Result2), nl.
+Prolog code: Distributive law
+% Define the distributive law for multiplication over addition
+distributive_law(A, B, C, Result) :-
+Result is A * (B + C).
+% Define some example expressions
+expression1(2, 3, 4).
+expression2(5, 6, 7).
+% Derive the results using the distributive law
+derive_results :-
+expression1(A, B, C),
+distributive_law(A, B, C, Result1),
+expression2(X, Y, Z),
+distributive_law(X, Y, Z, Result2),
+write('Result of expression 1 using distributive law: '), write(Result1), nl,
+write('Result of expression 2 using distributive law: '), write(Result2), nl.
