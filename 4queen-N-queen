@@ -74,3 +74,12 @@ try:
 prev_column = board.remove_in_current_row()except
 IndexError:
 # all queens removed
+# thus no more possible configurations
+break
+# try previous row again
+row -= 1
+# start checking at column = (1 + value of column in previous row)
+column = 1 + prev_column
+print('Number of solutions:', number_of_solutions)n =
+int(input('Enter n: '))
+solve_queen(n)
